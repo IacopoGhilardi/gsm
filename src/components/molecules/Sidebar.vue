@@ -11,7 +11,7 @@
           <img class="w-6" :src="require(`@/assets/images/commands/close.png`)" alt="hamburger">
         </div>
         <div>
-          <navbar :divider="true"></navbar>
+          <Navbar @removeSidebar="closeSidebar" :divider="true"></Navbar>
         </div>
       </div>
     </transition>
@@ -28,6 +28,8 @@ const toggleSidebar = () => {
 };
 
 const closeSidebar = () => {
+  console.log("Qua");
+  
   showSidebar.value = false;
 }
 </script>

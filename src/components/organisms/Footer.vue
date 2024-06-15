@@ -2,7 +2,7 @@
 import Navbar from '../molecules/Navbar.vue';
  const infoItems = [
  {
-    title: 'GSM s.r.l.',
+    title: 'GSM di Ghilardi Mario Stefano.',
     info: ''
   },
   {

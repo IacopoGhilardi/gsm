@@ -11,31 +11,35 @@
         <div v-else>
           <img class="max-h-6" src="../../assets/images/commands/up-arrows.png" alt="Collapse">
         </div>
-        <!-- ${require('@/assets/images/sfondo-removebg-preview.png')} -->
       </div>
     </div>
     <transition name="fade">
       <div v-if="expanded" class="catalog-container flex flex-wrap w-full mt-8 justify-center gap-4">
-        <CatalogCard class="w-full md:w-4/12 lg:w-3/12 flex justify-center mb-8" v-for="(item, index) in items" :key="index" :imageName="item.imageName" :pdfPath="item.pdfPath" />
+        <CatalogCard class="w-full md:w-4/12 lg:w-3/12 flex justify-center mb-8" v-for="(item, index) in items" :key="index" :imageName="item.cover" :pdfPath="item.catalog" />
       </div>
     </transition>
   </div>
 </template>
   
-  <script setup lang="ts">
-  import CatalogCard from '@/components/atoms/CatalogCard.vue';
+<script setup lang="ts">
+import CatalogCard from '@/components/atoms/CatalogCard.vue';
 import { ref } from 'vue';
-  
-  const props = defineProps({
-    brandImg: String,
-    items: Array
-  });
-  
-  const expanded = ref(false);
-  
-  const toggleExpanded = () => {
-    expanded.value = !expanded.value;
-  };
+
+interface Catalog {
+  cover: string;
+  catalog: string;
+}
+
+const props = defineProps<{
+  brandImg: string;
+  items: Catalog[];
+}>();
+
+const expanded = ref(false);
+
+const toggleExpanded = () => {
+  expanded.value = !expanded.value;
+};
   </script>
   
   <style scoped>
