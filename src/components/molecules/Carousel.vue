@@ -2,7 +2,7 @@
   <Carousel :autoplay="2000" :wrap-around="true">
     <Slide v-for="(item, index) in props.items" :key="index">
       <div class="carousel__item" v-if="type === 'image'">
-        <img class="w-40 max-w-full" :src="require(`@/assets/images/${item}`)" alt="">
+        <img class="w-40 max-w-full" :src="require(`@/assets/images/${item}`)" alt="Abbigliamento da lavoro a Pisa - Uniformi professionali">
       </div>
 
       <div v-else-if="type === 'service'">

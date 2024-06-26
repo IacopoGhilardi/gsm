@@ -2,7 +2,7 @@
   <div class="border shadow rounded p-4">
     <div @click="toggleExpanded" class="sticky-title cursor-pointer flex justify-between items-center max-h-20">
       <div class="max-h-full md:w-1/12 w-3/12 flex items-center">
-        <img class="h-full max-w-full" :src="require(`@/assets/images/${props.brandImg}`)" alt="Brand Logo">
+        <img class="h-full max-w-full" :src="require(`@/assets/images/${props.brandImg}`)" alt="Abbigliamento da lavoro a Pisa - Brand Logo">
       </div>
       <div class="md:w-1/12 w-2/12 p-4 flex items-center justify-center">
         <div v-if="!expanded">

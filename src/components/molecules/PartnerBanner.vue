@@ -10,7 +10,7 @@
       @mouseleave="resetColumns"
     >
       <div class="w-full flex justify-center">
-        <img :src="require(`@/assets/images/${props.imageSrc}`)" alt="">
+        <img :src="require(`@/assets/images/${props.imageSrc}`)" alt="Abbigliamento da lavoro a Pisa - Partner">
       </div>
       <div class="p-4 w-full flex justify-center">
         <slot></slot>        
